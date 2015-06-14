@@ -64,6 +64,47 @@ sumof(1,2,3,4)
 
 
 /*c1.4 nested functions */
+func returnFifteen() -> Int{
+    var y = 100
+    
+    func add(){
+        y += 5
+    }
+    
+    add()
+    
+    return y
+}
+
+returnFifteen()
+
+
+/*c1.5 func as a return value */
+func makeIncrementer() -> (Int -> Int) {
+    func addOne(number: Int) ->Int {
+        return 1 + number
+    }
+    
+    return addOne
+}
+
+var increment = makeIncrementer()
+
+increment(7)
+
+
+/*c1.6 func as a argument */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
